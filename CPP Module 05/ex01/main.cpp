@@ -2,7 +2,7 @@
 
 int main()
 {
-    #if 0
+#if 0
     {
         Bureaucrat b("John");
         try {
@@ -11,7 +11,7 @@ int main()
             std::cout << e.what() << std::endl;
         }
     }
-    #elif 1
+#elif 1
     {
         Bureaucrat a("Taylor", 20);
         Form f("Military Form", 20, 10);
@@ -19,7 +19,7 @@ int main()
         a.signForm(f);
         std::cout << f;
     }
-    #else
+#else
     {
         Bureaucrat b("Brad", 50);
         Form f("Education Form", 40, 20);
@@ -27,5 +27,5 @@ int main()
         b.signForm(f);
         std::cout << f;
     }
-    #endif
+#endif
 }

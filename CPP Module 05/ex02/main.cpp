@@ -5,7 +5,7 @@
 
 int main()
 {
-    #if 1
+#if 1
     {
         Bureaucrat a("Trillian", 25);
         Bureaucrat b("Ford Prefect", 1);
@@ -18,7 +18,7 @@ int main()
         b.executeForm(ppf);
         delete rqf;
     }
-    #else
+#else
     {
         Bureaucrat z("The whale in Magrathea");
         ShrubberyCreationForm scf("shrub");
@@ -34,5 +34,5 @@ int main()
         }
         z.executeForm(scf);
     }
-    #endif
+#endif
 }

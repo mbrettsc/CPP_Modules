@@ -2,7 +2,7 @@
 
 int main()
 {
-    #if 0
+#if 0
     {
         Bureaucrat b("John");
         std::cout << b << std::endl;
@@ -13,7 +13,7 @@ int main()
         }
         std::cout << b << std::endl;
     }
-    #else
+#else
     {
         Bureaucrat a("Taylor", 5);
         try {
@@ -31,5 +31,5 @@ int main()
         }
         std::cout << a << std::endl;
     }
-    #endif
+#endif
 }
