@@ -9,7 +9,7 @@ void printArr(T& d)
 }
 
 template<typename T>
-void squareOfN(T &n)
+void squareOfN(T& n)
 {
     n *= n;
 }

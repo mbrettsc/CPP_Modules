@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "ostream": "cpp",
-        "initializer_list": "cpp",
-        "iostream": "cpp",
-        "exception": "cpp",
-        "new": "cpp"
-    }
-}

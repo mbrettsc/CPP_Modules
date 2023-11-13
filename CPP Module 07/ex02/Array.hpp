@@ -1,19 +1,21 @@
 #pragma once
 
+#include <iostream>
+
 template<typename T>
-class Array
-{
-private:
-    T *mArray;
-    unsigned int _size;
+class Array {
 public:
     Array();
-    Array(unsigned int n);
+    Array(unsigned int );
     Array(const Array& copy);
     ~Array();
     Array &operator=(const Array& copy);
-    T& operator[](const int location) const;
+    T &operator[](const int location);
     unsigned int size() const;
+private:
+    T *mArray;
+    unsigned int _size;
 };
 
-#include "Array.tpp"
+#include "Array.tpp" 
+
