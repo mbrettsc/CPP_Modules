@@ -3,6 +3,14 @@
 #include <cstdlib>
 #include <sstream>
 
+Btc::Btc() {}
+
+Btc::~Btc() {}
+
+Btc::Btc(const Btc& other) { *this = other; }
+
+Btc& Btc::operator=(const Btc& other) { (void)other; return *this; }
+
 void Btc::exitError(std::string error)
 {
     std::cout << "Error: " << error << std::endl;

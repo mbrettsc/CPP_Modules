@@ -21,6 +21,10 @@ public:
     void readData();
     void printMap(std::map<std::string, double> &map);
     void exitError(std::string error);
+    Btc();
+    ~Btc();
+    Btc(const Btc& other);
+    Btc& operator=(const Btc& other);
 private:
     std::map<std::string, double> data;
 };
