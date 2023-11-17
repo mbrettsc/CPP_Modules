@@ -9,7 +9,10 @@ template<typename T>
 MutantStack<T>::~MutantStack() {}
 
 template<typename T>
-MutantStack<T>::MutantStack(const MutantStack& other): std::stack<T>(other) {}
+MutantStack<T>::MutantStack(const MutantStack& other) { *this = other; }
+
+template<typename T>
+MutantStack<T> &MutantStack<T>::operator=(const MutantStack& other) { this->std::stack<T> = std::stack<T>(other); }
 
 template<typename T>
 typename MutantStack<T>::iterator MutantStack<T>::begin() { return this->c.begin(); }
