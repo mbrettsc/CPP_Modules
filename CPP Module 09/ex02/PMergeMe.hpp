@@ -22,7 +22,7 @@ public:
 	template<typename T>
 	void mergeInsert(T& A, int p, int r);
 	template<typename T>
-	void insertionSort(T& A);
+	void insertionSort(T& A, int p, int r);
 	void printTime(timeval tv1, timeval tv2, std::string type);
 private:
 	std::list<int> mList;

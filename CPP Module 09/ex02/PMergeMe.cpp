@@ -56,8 +56,12 @@ void PmergeMe::takeArgs(int ac, char** av)
 }
 
 template<typename T>
-void PmergeMe::insertionSort(T& A) {
-    for (typename T::iterator it = A.begin(); it != A.end(); ++it) {
+void PmergeMe::insertionSort(T& A, int p, int r) {
+	typename T::iterator it = A.begin();
+	typename T::iterator ite = A.begin();
+	std::advance(it, p);
+	std::advance(ite, r + 1);
+    while (it != ite && it != A.end()) {
         typename T::iterator current = it;
         int temp = *it;
         typename T::iterator prev = it;
@@ -69,6 +73,7 @@ void PmergeMe::insertionSort(T& A) {
         }
         *current = temp;
 		current = next;
+		++it;
     }
 }
 
@@ -130,7 +135,7 @@ void PmergeMe::mergeInsert(T& A, int p, int r)
 		merge(A, p, q, r);
 	}
 	else
-		insertionSort(A);
+		insertionSort(A, p, r);
 }
 
 void PmergeMe::printTime(timeval tv1, timeval tv2, std::string type)
