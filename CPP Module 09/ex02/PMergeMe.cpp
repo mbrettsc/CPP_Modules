@@ -56,18 +56,21 @@ void PmergeMe::takeArgs(int ac, char** av)
 }
 
 template<typename T>
-void PmergeMe::insertionSort(T& A, int p, int r) {
+void PmergeMe::insertionSort(T& A, int p, int r)
+{
 	typename T::iterator it = A.begin();
 	typename T::iterator ite = A.begin();
 	std::advance(it, p);
 	std::advance(ite, r + 1);
-    while (it != ite && it != A.end()) {
+    while (it != ite && it != A.end())
+	{
         typename T::iterator current = it;
         int temp = *it;
         typename T::iterator prev = it;
 		typename T::iterator next = prev;
 		++next;
-        while (prev != A.begin() && *(--prev) > temp) {
+        while (prev != A.begin() && *(--prev) > temp)
+		{
             *current = *prev;
             current = prev;
         }
