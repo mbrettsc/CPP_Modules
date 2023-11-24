@@ -6,8 +6,7 @@
 
 typedef std::map<size_t, std::map<std::string,
         std::vector<double> > >::iterator inputIt;
-typedef std::map<size_t, std::map<std::string,
-        std::vector<double> > > inputMap;
+typedef std::map<size_t, std::map<std::string, std::vector<double> > > inputMap;
 typedef std::map<std::string, double>::iterator dataIt;
 
 class Btc

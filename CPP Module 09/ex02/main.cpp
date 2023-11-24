@@ -1,4 +1,4 @@
-#include "PMergeMe.hpp"
+#include "PmergeMe.hpp"
 
 int main(int ac, char **av)
 {
@@ -6,7 +6,7 @@ int main(int ac, char **av)
 		std::cout << "Error: need number." << std::endl;
 	else
 	{
-		PMergeMe merge;
+		PmergeMe merge;
 		merge.mergeMe(ac, av);
 	}
 	return 0;
