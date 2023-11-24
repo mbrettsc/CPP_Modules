@@ -1,4 +1,6 @@
 #include "RPN.hpp"
+#include <cstring>
+#include <cstdlib>
 
 RPN::RPN() {}
 
@@ -12,7 +14,7 @@ void RPN::exit_error() { std::cout << "Error" << std::endl; exit(1); }
 
 std::string RPN::checkInput(char* input)
 {
-    size_t i = 0;
+    size_t i = 0, j = 0;
     std::string ret;
     char *tmp = std::strtok(input, " ");
     while (tmp != NULL)
@@ -25,13 +27,15 @@ std::string RPN::checkInput(char* input)
             if (tmp[0] == PLUS || tmp[0] == MINUS
                 || tmp[0] == MULTI || tmp[0] == DIVIDE)
                 ++i;
+            else
+                ++j;
             ret += tmp[0];
         }
         else
             exit_error();
         tmp = std::strtok(NULL, " ");
     }
-    if (i == 0)
+    if (i == 0 || j == 1)
         exit_error();
     return ret;
 }
@@ -48,7 +52,7 @@ void RPN::processInput(char* input)
         else
         {
             x = mStack.top(); mStack.pop();
-            y = (mStack.top()); mStack.pop();
+            y = mStack.top(); mStack.pop();
             if (mStr[i] == PLUS)
                 mStack.push(x + y);
             else if (mStr[i] == MINUS)
