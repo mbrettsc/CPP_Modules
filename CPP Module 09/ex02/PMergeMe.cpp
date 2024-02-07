@@ -156,7 +156,6 @@ void PmergeMe::mergeMe(int ac, char **av)
 	gettimeofday(&tv1, 0);
     mergeInsert(mList, 0, mList.size() - 1);
 	gettimeofday(&tv2, 0);
-
 	std::cout << "After:  ";
 	int i = 0;
 	for (std::list<int>::iterator it = mList.begin(); it != mList.end(); ++it) {
