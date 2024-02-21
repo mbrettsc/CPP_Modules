@@ -119,7 +119,6 @@ void merge(T& A, int p, int q, int r)
 
     for (;leftIt != left.end(); ++leftIt, ++mergedIt) {
         *mergedIt = *leftIt;
-        ++mergedIt;
     }
 
     for (;rightIt != right.end(); ++rightIt, ++mergedIt) {
